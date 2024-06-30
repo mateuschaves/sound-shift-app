@@ -1,11 +1,13 @@
 import React from 'react';
 import * as AppleAuthentication from 'expo-apple-authentication';
 import { StyleSheet } from 'react-native';
-import { Container } from './styles';
+import { Container, MusicAnimation, Title } from './styles';
 
 export default function SignInScreen() {
   return (
     <Container>
+      <MusicAnimation source={require('~/assets/animations/music.json')} autoPlay loop />
+      <Title>{`Transfira suas músicas\nCurta suas playlists.`}</Title>
       <AppleAuthentication.AppleAuthenticationButton
         buttonType={AppleAuthentication.AppleAuthenticationButtonType.SIGN_IN}
         buttonStyle={AppleAuthentication.AppleAuthenticationButtonStyle.WHITE}
@@ -19,8 +21,6 @@ export default function SignInScreen() {
                 AppleAuthentication.AppleAuthenticationScope.EMAIL,
               ],
             });
-
-            console.log(credential)
             // signed in
           } catch (e: any) {
             if (e.code === 'ERR_REQUEST_CANCELED') {

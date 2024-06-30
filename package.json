@@ -1,0 +1,48 @@
+{
+  "name": "sound-shift-app",
+  "version": "1.0.0",
+  "main": "expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "lint": "eslint .",
+    "lintFixAll": "eslint 'src/**/*.{js,jsx}'",
+    "prettierFixAll": "prettier --write 'src/**/*.{js,jsx}'",
+    "fix:lintPrettier": "npm run prettierFixAll && npm run lintFixAll"
+  },
+  "dependencies": {
+    "@react-navigation/native": "^6.1.17",
+    "@react-navigation/native-stack": "^6.9.26",
+    "expo": "~51.0.17",
+    "expo-splash-screen": "~0.27.5",
+    "expo-status-bar": "~1.12.1",
+    "lottie-react-native": "6.7.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-native": "0.74.2",
+    "react-native-safe-area-context": "4.10.1",
+    "react-native-screens": "3.31.1",
+    "styled-components": "^6.1.1",
+    "expo-apple-authentication": "~6.4.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.0",
+    "@eslint/compat": "^1.1.0",
+    "@eslint/js": "^9.6.0",
+    "@types/react": "~18.2.45",
+    "babel-eslint": "^10.1.0",
+    "babel-plugin-root-import": "^5.1.0",
+    "eslint": "^9.6.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-import-resolver-babel-plugin-root-import": "^1.1.1",
+    "eslint-plugin-react": "^7.34.3",
+    "eslint-plugin-react-native": "^4.1.0",
+    "globals": "^15.6.0",
+    "prettier": "^3.3.2",
+    "typescript": "^5.1.3",
+    "typescript-eslint": "^7.14.1"
+  },
+  "private": true
+}
